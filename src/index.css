@@ -228,6 +228,15 @@ header {
   pointer-events: none;
 }
 
+.links_first {
+  transition: color 0.3s ease;
+  cursor: grab;
+}
+
+.links_first:hover {
+  color: var(--sub-font-color);
+}
+
 /*@media (prefers-color-scheme: light) {
   :root {
     color: #213547;

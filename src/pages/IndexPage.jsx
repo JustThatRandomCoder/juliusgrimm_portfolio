@@ -1,8 +1,46 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import gsap from "gsap";
 import { useNavigate } from 'react-router-dom';
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function IndexPage() {
+    const navigate = useNavigate();
+    const scrollRef = useRef();
+
+    useEffect(() => {
+        const projects = gsap.utils.toArray(scrollRef.current.children);
+
+        projects.forEach((project, i) => {
+            gsap.fromTo(
+                project,
+                { y: 100, opacity: 0 }, // Starting position
+                {
+                    y: 0,
+                    opacity: 1,
+                    ease: "power1.out",
+                    scrollTrigger: {
+                        trigger: project,
+                        start: "top 85%", // Starts when the top of the project enters the viewport
+                        end: "top 20%",  // Ends when the project is near the middle
+                        scrub: true,
+                        invalidateOnRefresh: true, // Avoid position miscalculations
+                    },
+                }
+            );
+        });
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
+
+
+
 
     return (
         <>
@@ -23,10 +61,11 @@ function IndexPage() {
                 </div>
                 <div className="links">
                     <div className="bebas-neue-regular links_text left">Scroll down, <br></br> to see my work</div>
-                    <div className="bebas-neue-regular links_text right">Scroll down, <br></br> to see my work</div>
+                    <div className="bebas-neue-regular links_text right"><span className="links_first" onClick={() => navigate('/about')}>About me</span> <br></br> <span className="links_first" onClick={() => document.getElementById('projectSection').scrollIntoView({ behavior: 'smooth' })}
+                    >My projects and work</span></div>
                 </div>
             </motion.div>
-            <div className="projectSection">
+            <div className="projectSection" id="projectSection" ref={scrollRef}>
                 <div className="project">
                     <div onClick={() => window.open('https://festifly.de', '_blank')} className="project-thumbnail nohover"><img src="https://cdn.festifly.de/assets/img/festifly.de/logo/logo.svg" alt="Festifly Logo" className="projectLogo" /></div>
                     <div className="project-name"><a className="project-name-link project-name-headline">FesitFly</a> - Eventmanagement redefined</div>
