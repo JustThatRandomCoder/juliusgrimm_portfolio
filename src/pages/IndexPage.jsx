@@ -18,17 +18,17 @@ function IndexPage() {
         projects.forEach((project, i) => {
             gsap.fromTo(
                 project,
-                { y: 100, opacity: 0 }, // Starting position
+                { y: 100, opacity: 0 },
                 {
                     y: 0,
                     opacity: 1,
                     ease: "power1.out",
                     scrollTrigger: {
                         trigger: project,
-                        start: "top 85%", // Starts when the top of the project enters the viewport
-                        end: "top 20%",  // Ends when the project is near the middle
+                        start: "top 85%",
+                        end: "top 20%",
                         scrub: true,
-                        invalidateOnRefresh: true, // Avoid position miscalculations
+                        invalidateOnRefresh: true,
                     },
                 }
             );
@@ -38,9 +38,6 @@ function IndexPage() {
             ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         };
     }, []);
-
-
-
 
     return (
         <>
