@@ -1,11 +1,18 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.05vw;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--font-color);
+  background-color: var(--backgound-color);
+
+  --backgound-color: #0A0B15;
+  --font-color: #A5A5CC;
+  --sub-font-color: #5D5D7C;
+  --bg-font-color: #a0a0c323;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,45 +20,212 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.be-vietnam-pro-regular {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: underline;
+  cursor: grab;
+  transition: color 0.3s ease;
+}
+
 a:hover {
-  color: #535bf2;
+  color: #A5A5CC;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  min-width: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.firstSection {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  place-items: center;
+  justify-content: center;
 }
-button:hover {
-  border-color: #646cff;
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+header {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.headername {
+  letter-spacing: 0.5vw;
+  font-size: 2vw;
+}
+
+.email_head {
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+  text-decoration: none;
+  line-height: 3;
+}
+
+.head {
+  width: 100%;
+  place-items: center;
+  justify-content: center;
+  text-align: center !important;
+  position: relative;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-font {
+  color: var(--bg-font-color);
+  line-height: 1;
+  font-size: 40vw;
+  max-font-size: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: -10px;
+}
+
+.headline {
+  font-size: 4vw;
+  font-weight: 600;
+  line-height: 1.2;
+  top: 0;
+  text-shadow: 0px 0px 50px #0000005a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.links {
+  position: absolute;
+  justify-content: space-between;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+}
+
+.links_text {
+  font-size: 3vw;
+  line-height: 1.2;
+}
+
+.links_text.left {
+  text-align: left;
+}
+
+.links_text.right {
+  text-align: right;
+}
+
+.projectSection {
+  margin-top: 10rem;
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project {
+  width: 40vw;
+  min-width: 20rem;
+  text-align: left;
+}
+
+.project.mT {
+  margin-top: 8vw;
+}
+
+.project-name {
+  margin-top: 25px;
+  font-size: 2vw;
+}
+
+.project-name-link {
+  text-decoration: underline;
+}
+
+.project-name-headline {
+  cursor: text !important;
+}
+
+.project-date {
+  color: var(--sub-font-color);
+  font-size: 1.5vw;
+}
+
+.project-description {
+  margin-top: 15px;
+  color: var(--sub-font-color);
+  font-size: 1.5vw;
+}
+
+.project-description.code {
+  text-decoration: underline;
+  cursor: grab;
+  transition: color 0.3s ease;
+}
+
+.project-description.code:hover {
+  color: #A5A5CC;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 27vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: var(--bg-font-color);
+  transition: opacity 0.3s ease;
+}
+
+.project-thumbnail:hover {
+  opacity: 0.6;
+  cursor: grab;
+}
+
+.project-thumbnail.nohover:hover {
+  opacity: 1;
+  cursor: default;
+  pointer-events: none;
+}
+
+.projectLogo {
+  width: 10vw;
+}
+
+.projectLogo.openWeather {
+  width: 12vw;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,10 +233,62 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media only screen and (min-width: 1620px) {
+  .bg-font {
+    font-size: 40rem;
+  }
+
+  .headline {
+    font-size: 4rem;
+  }
+
+  .links_text {
+    font-size: 3rem;
+  }
+
+  .headername {
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+
+  .email_head {
+    font-size: 1rem;
+  }
+
+  .project {
+    width: 38rem;
+  }
+
+  .project-thumbnail {
+    height: 26rem;
+  }
+
+  .project-name {
+    font-size: 2rem;
+  }
+
+  .project-date,
+  .project-description {
+    font-size: 1.5rem;
+  }
+
+  .projectLogo {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project.mW {
+    margin-top: 8vw;
   }
 }
