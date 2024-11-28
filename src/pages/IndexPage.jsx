@@ -64,7 +64,7 @@ function IndexPage() {
             </motion.div>
             <div className="projectSection" id="projectSection" ref={scrollRef}>
                 <div className="project">
-                    <div onClick={() => window.open('https://festifly.de', '_blank')} className="project-thumbnail nohover"><img src="https://cdn.festifly.de/assets/img/festifly.de/logo/logo.svg" alt="Festifly Logo" className="projectLogo" /></div>
+                    <motion.div onClick={() => window.open('https://festifly.de', '_blank')} className="project-thumbnail nohover" whileTap={{ scale: 0.98 }}><img src="https://cdn.festifly.de/assets/img/festifly.de/logo/logo.svg" alt="Festifly Logo" className="projectLogo" /></motion.div>
                     <div className="project-name"><a className="project-name-link project-name-headline">FesitFly</a> - Eventmanagement redefined</div>
                     <div className="project-date">October 2024 - Today | BETA EXPECTED IN 2025</div>
                     <div className="project-description">
@@ -72,7 +72,7 @@ function IndexPage() {
                     </div>
                 </div>
                 <div className="project mT">
-                    <div onClick={() => window.open('https://vibevote.de', '_blank')} className="project-thumbnail"><img src="https://vibevote.de/static/images/vibeVote_logo.png" alt="VibeVote Logo" className="projectLogo" /></div>
+                    <motion.div onClick={() => window.open('https://vibevote.de', '_blank')} className="project-thumbnail" whileTap={{ scale: 0.98 }}><img src="../public/vibevote_logo.png" alt="VibeVote Logo" className="projectLogo" /></motion.div>
                     <div className="project-name"><a className="project-name-link project-name-headline">VibeVote</a> - Songrequesting made easy</div>
                     <div className="project-date">July 2024 - Today</div>
                     <div className="project-description">
@@ -80,7 +80,7 @@ function IndexPage() {
                     </div>
                 </div>
                 <div className="project mW">
-                    <div onClick={() => window.open('https://openweatherhub.de', '_blank')} className="project-thumbnail nohover"><img src="../public/OpenWeatherHub_logo.png" alt="OpenWetaherHub Logo" className="projectLogo openWeather" /></div>
+                    <motion.div onClick={() => window.open('https://openweatherhub.de', '_blank')} className="project-thumbnail nohover" whileTap={{ scale: 0.98 }}><img src="../public/OpenWeatherHub_logo.png" alt="OpenWetaherHub Logo" className="projectLogo openWeather" /></motion.div>
                     <div className="project-name"><a className="project-name-link project-name-headline">OpenWeatherHub</a> - Opensource</div>
                     <div className="project-date">May 2024 - Today | BETA EXPECTED IN 2025</div>
                     <div className="project-description">
@@ -89,7 +89,7 @@ function IndexPage() {
                     <div className="disabled project-description code">View Code</div>
                 </div>
                 <div className="project mT">
-                    <div onClick={() => window.open('https://skyview.juliusgrimm.dev', '_blank')} className="project-thumbnail"><img src="../public/skyview_logo.svg" alt="SkyView Logo" className="projectLogo" /></div>
+                    <motion.div onClick={() => window.open('https://skyview.juliusgrimm.dev', '_blank')} className="project-thumbnail" whileTap={{ scale: 0.98 }}><img src="../public/skyview_logo.svg" alt="SkyView Logo" className="projectLogo" /></motion.div>
                     <div className="project-name"><a className="project-name-link project-name-headline">SkyView</a> - Opensource</div>
                     <div className="project-date">July 2024</div>
                     <div className="project-description">
