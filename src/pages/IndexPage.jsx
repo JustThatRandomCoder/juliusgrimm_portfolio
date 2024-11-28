@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import gsap from "gsap";
-import { useNavigate } from 'react-router-dom';
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useNavigate } from 'react-router-dom';
+import Project from "../components/Project";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,18 +14,19 @@ function IndexPage() {
     useEffect(() => {
         const projects = gsap.utils.toArray(scrollRef.current.children);
 
-        projects.forEach((project, i) => {
+        projects.forEach((project) => {
             gsap.fromTo(
                 project,
                 { y: 100, opacity: 0 },
                 {
                     y: 0,
                     opacity: 1,
-                    ease: "power1.out",
+                    ease: "power2.out",
+                    duration: 1.5,
                     scrollTrigger: {
                         trigger: project,
-                        start: "top 85%",
-                        end: "top 20%",
+                        start: "top 90%",
+                        end: "top 10%",
                         scrub: true,
                         invalidateOnRefresh: true,
                     },
@@ -57,46 +57,56 @@ function IndexPage() {
                     <div className="headline">I'm a fullstack 14 year old <br /> developer and designer <br /> based in Germany</div>
                 </div>
                 <div className="links">
-                    <div className="bebas-neue-regular links_text left">Scroll down, <br></br> to see my work</div>
-                    <div className="bebas-neue-regular links_text right"><span className="links_first" onClick={() => navigate('/about')}>About me</span> <br></br> <span className="links_first" onClick={() => document.getElementById('projectSection').scrollIntoView({ behavior: 'smooth' })}
-                    >My projects and work</span></div>
+                    <div className="bebas-neue-regular links_text left">Scroll down, <br /> to see my work</div>
+                    <div className="bebas-neue-regular links_text right">
+                        <span className="links_first" onClick={() => navigate('/about')}>About me</span> <br />
+                        <span className="links_first" onClick={() => document.getElementById('projectSection').scrollIntoView({ behavior: 'smooth' })}>
+                            My projects and work
+                        </span>
+                    </div>
                 </div>
             </motion.div>
             <div className="projectSection" id="projectSection" ref={scrollRef}>
-                <div className="project">
-                    <motion.div onClick={() => window.open('https://festifly.de', '_blank')} className="project-thumbnail nohover" whileTap={{ scale: 0.98 }}><img src="https://cdn.festifly.de/assets/img/festifly.de/logo/logo.svg" alt="Festifly Logo" className="projectLogo" /></motion.div>
-                    <div className="project-name"><a className="project-name-link project-name-headline">FesitFly</a> - Eventmanagement redefined</div>
-                    <div className="project-date">October 2024 - Today | BETA EXPECTED IN 2025</div>
-                    <div className="project-description">
-                        FestiFly is an event management tool with features like stage planning, AI-powered song requests, and group chats. I'm developing it with <a onClick={() => window.open('https://hanneszaiser.com', '_blank')} className="project-name-link">Hannes Zaiser</a>.
-                    </div>
-                </div>
-                <div className="project mT">
-                    <motion.div onClick={() => window.open('https://vibevote.de', '_blank')} className="project-thumbnail" whileTap={{ scale: 0.98 }}><img src="../public/vibevote_logo.png" alt="VibeVote Logo" className="projectLogo" /></motion.div>
-                    <div className="project-name"><a className="project-name-link project-name-headline">VibeVote</a> - Songrequesting made easy</div>
-                    <div className="project-date">July 2024 - Today</div>
-                    <div className="project-description">
-                        VibeVote simplifies song request management at events, an essential tool for hosts and DJs. I'm developing this tool jointly with Benedikt Globisch.
-                    </div>
-                </div>
-                <div className="project mW">
-                    <motion.div onClick={() => window.open('https://openweatherhub.de', '_blank')} className="project-thumbnail nohover" whileTap={{ scale: 0.98 }}><img src="../public/OpenWeatherHub_logo.png" alt="OpenWetaherHub Logo" className="projectLogo openWeather" /></motion.div>
-                    <div className="project-name"><a className="project-name-link project-name-headline">OpenWeatherHub</a> - Opensource</div>
-                    <div className="project-date">May 2024 - Today | BETA EXPECTED IN 2025</div>
-                    <div className="project-description">
-                        OpenWeatherHub is an open-source weather service that allows users to add their own cost-effective weather station and integrate it into their smart home.
-                    </div>
-                    <div className="disabled project-description code">View Code</div>
-                </div>
-                <div className="project mT">
-                    <motion.div onClick={() => window.open('https://skyview.juliusgrimm.dev', '_blank')} className="project-thumbnail" whileTap={{ scale: 0.98 }}><img src="../public/skyview_logo.svg" alt="SkyView Logo" className="projectLogo" /></motion.div>
-                    <div className="project-name"><a className="project-name-link project-name-headline">SkyView</a> - Opensource</div>
-                    <div className="project-date">July 2024</div>
-                    <div className="project-description">
-                        SkyView was one of the tasks of the Minihackathon by Kevin Chromik. SkyView is like OpenWeatherHub an open-source weatherservice.
-                    </div>
-                    <div onClick={() => window.open('https://github.com/JustThatRandomCoder/SkyView', '_blank')} className="project-description code">View Code</div>
-                </div>
+                <Project
+                    thumbnail="https://cdn.festifly.de/assets/img/festifly.de/logo/logo.svg"
+                    alt="Festifly Logo"
+                    logoClass=""
+                    name="Festifly"
+                    date="October 2024 - Today | BETA EXPECTED IN 2025"
+                    description="FestiFly is an event management tool with features like stage planning, AI-powered song requests, and group chats."
+                    link="https://festifly.de"
+                    collaborators="Eventmanagement redefined"
+                />
+                <Project
+                    thumbnail="../public/vibevote_logo.png"
+                    alt="VibeVote Logo"
+                    logoClass=""
+                    name="VibeVote"
+                    date="July 2024 - Today"
+                    description="VibeVote simplifies song request management at events, an essential tool for hosts and DJs."
+                    link="https://vibevote.de"
+                    collaborators="Songrequesting made easy"
+                />
+                <Project
+                    thumbnail="../public/OpenWeatherHub_logo.png"
+                    alt="OpenWeatherHub Logo"
+                    logoClass="openWeather"
+                    name="OpenWeatherHub"
+                    date="May 2024 - Today | BETA EXPECTED IN 2025"
+                    description="OpenWeatherHub is an open-source weather service that allows users to add their own cost-effective weather station and integrate it into their smart home."
+                    className="mT"
+                />
+                <Project
+                    thumbnail="../public/skyview_logo.svg"
+                    alt="SkyView Logo"
+                    logoClass=""
+                    name="SkyView"
+                    date="July 2024"
+                    description="SkyView was one of the tasks of the Minihackathon by Kevin Chromik. SkyView is like OpenWeatherHub an open-source weather service."
+                    link="https://skyview.juliusgrimm.dev"
+                    codeLink="https://github.com/JustThatRandomCoder/SkyView"
+                    className="mT"
+                />
             </div>
         </>
     );
