@@ -28,7 +28,7 @@ function IndexPage() {
                     scrollTrigger: {
                         trigger: project,
                         start: "top 90%",
-                        end: "top 30%",
+                        end: "top 20%",
                         scrub: true,
                         invalidateOnRefresh: true,
                     },
@@ -102,7 +102,7 @@ function IndexPage() {
                     name="OpenWeatherHub"
                     date="May 2024 - Today | BETA EXPECTED IN 2025"
                     description="OpenWeatherHub is an open-source weather service that allows users to add their own cost-effective weather station and integrate it into their smart home."
-                    className="mT"
+                    className="mT nohover"
                 />
                 <Project
                     thumbnail="../public/skyview_logo.svg"
@@ -116,6 +116,9 @@ function IndexPage() {
                     className="mT"
                 />
             </div>
+            <footer>
+
+            </footer>
         </>
     );
 }

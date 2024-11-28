@@ -153,6 +153,7 @@ header {
 .projectSection {
   margin-top: 10rem;
   min-height: 90vh;
+  margin-bottom: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
