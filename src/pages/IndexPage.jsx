@@ -4,6 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useNavigate } from 'react-router-dom';
 import Project from "../components/Project";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,12 +23,12 @@ function IndexPage() {
                 {
                     y: 0,
                     opacity: 1,
-                    ease: "power2.out",
-                    duration: 1.5,
+                    ease: "power1.inOut",
+                    duration: 3,
                     scrollTrigger: {
                         trigger: project,
                         start: "top 90%",
-                        end: "top 10%",
+                        end: "top 30%",
                         scrub: true,
                         invalidateOnRefresh: true,
                     },
@@ -58,6 +60,11 @@ function IndexPage() {
                 </div>
                 <div className="links">
                     <div className="bebas-neue-regular links_text left">Scroll down, <br /> to see my work</div>
+                    <div className="socials">
+                        <FontAwesomeIcon icon={faLinkedin} className="links_first" onClick={() => window.open('https://www.linkedin.com/in/julius-grimm-298898333', '_blank')} />
+                        <FontAwesomeIcon icon={faGithub} className="links_first" onClick={() => window.open('https://github.com/justthatrandomcoder', '_blank')} />
+                        <FontAwesomeIcon icon={faInstagram} className="links_first" onClick={() => window.open('https://instagram.com/julius_gr_', '_blank')} />
+                    </div>
                     <div className="bebas-neue-regular links_text right">
                         <span className="links_first" onClick={() => navigate('/about')}>About me</span> <br />
                         <span className="links_first" onClick={() => document.getElementById('projectSection').scrollIntoView({ behavior: 'smooth' })}>
@@ -86,6 +93,7 @@ function IndexPage() {
                     description="VibeVote simplifies song request management at events, an essential tool for hosts and DJs."
                     link="https://vibevote.de"
                     collaborators="Songrequesting made easy"
+                    className="mW"
                 />
                 <Project
                     thumbnail="../public/OpenWeatherHub_logo.png"
