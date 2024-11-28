@@ -102,7 +102,7 @@ function IndexPage() {
                     name="OpenWeatherHub"
                     date="May 2024 - Today | BETA EXPECTED IN 2025"
                     description="OpenWeatherHub is an open-source weather service that allows users to add their own cost-effective weather station and integrate it into their smart home."
-                    className="mT nohover"
+                    className="mT noho"
                 />
                 <Project
                     thumbnail="../public/skyview_logo.svg"
