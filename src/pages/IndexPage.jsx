@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useNavigate } from 'react-router-dom';
 import Project from "../components/Project";
+import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -81,8 +82,8 @@ function IndexPage() {
                     name="Festifly"
                     date="October 2024 - Today | BETA EXPECTED IN 2025"
                     description="FestiFly is an event management tool with features like stage planning, AI-powered song requests, and group chats."
-                    link="https://festifly.de"
                     collaborators="Eventmanagement redefined"
+                    className="nohover"
                 />
                 <Project
                     thumbnail="../public/vibevote_logo.png"
@@ -93,7 +94,7 @@ function IndexPage() {
                     description="VibeVote simplifies song request management at events, an essential tool for hosts and DJs."
                     link="https://vibevote.de"
                     collaborators="Songrequesting made easy"
-                    className="mW"
+                    className="mT"
                 />
                 <Project
                     thumbnail="../public/OpenWeatherHub_logo.png"
@@ -102,7 +103,7 @@ function IndexPage() {
                     name="OpenWeatherHub"
                     date="May 2024 - Today | BETA EXPECTED IN 2025"
                     description="OpenWeatherHub is an open-source weather service that allows users to add their own cost-effective weather station and integrate it into their smart home."
-                    className="mT noho"
+                    className="nohover"
                 />
                 <Project
                     thumbnail="../public/skyview_logo.svg"
@@ -116,9 +117,7 @@ function IndexPage() {
                     className="mT"
                 />
             </div>
-            <footer>
-
-            </footer>
+            <Footer />
         </>
     );
 }
