@@ -62,15 +62,44 @@ function IndexPage() {
                 <div className="links">
                     <div className="bebas-neue-regular links_text left">Scroll down, <br /> to see my work</div>
                     <div className="socials">
-                        <FontAwesomeIcon icon={faLinkedin} className="links_first" onClick={() => window.open('https://www.linkedin.com/in/julius-grimm-298898333', '_blank')} />
-                        <FontAwesomeIcon icon={faGithub} className="links_first" onClick={() => window.open('https://github.com/justthatrandomcoder', '_blank')} />
-                        <FontAwesomeIcon icon={faInstagram} className="links_first" onClick={() => window.open('https://instagram.com/julius_gr_', '_blank')} />
+                        <motion.div
+                            whileTap={{ scale: 0.8 }}
+                            className="icon-wrapper"
+                            onClick={() => window.open('https://www.linkedin.com/in/julius-gr', '_blank')}
+                        >
+                            <FontAwesomeIcon icon={faLinkedin} className="links_first" />
+                        </motion.div>
+                        <motion.div
+                            whileTap={{ scale: 0.8 }}
+                            className="icon-wrapper"
+                            onClick={() => window.open('https://github.com/justthatrandomcoder', '_blank')}
+                        >
+                            <FontAwesomeIcon icon={faGithub} className="links_first" />
+                        </motion.div>
+                        <motion.div
+                            whileTap={{ scale: 0.8 }}
+                            className="icon-wrapper"
+                            onClick={() => window.open('https://instagram.com/julius_gr_', '_blank')}
+                        >
+                            <FontAwesomeIcon icon={faInstagram} className="links_first" />
+                        </motion.div>
                     </div>
                     <div className="bebas-neue-regular links_text right">
-                        <span className="links_first" onClick={() => navigate('/about')}>About me</span> <br />
-                        <span className="links_first" onClick={() => document.getElementById('projectSection').scrollIntoView({ behavior: 'smooth' })}>
+                        <motion.span
+                            className="links_first"
+                            onClick={() => navigate('/about')}
+                            whileTap={{ scale: 0.8 }}
+                        >
+                            About me
+                        </motion.span>
+                        <br />
+                        <motion.span
+                            className="links_first"
+                            onClick={() => document.getElementById('projectSection').scrollIntoView({ behavior: 'smooth' })}
+                            whileTap={{ scale: 0.8 }}
+                        >
                             My projects and work
-                        </span>
+                        </motion.span>
                     </div>
                 </div>
             </motion.div>

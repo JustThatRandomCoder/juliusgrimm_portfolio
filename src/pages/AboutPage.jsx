@@ -6,7 +6,7 @@ function AboutPage() {
 
     return (
         <>
-            <div>test about</div>
+            <div>In development</div>
         </>
     );
 }

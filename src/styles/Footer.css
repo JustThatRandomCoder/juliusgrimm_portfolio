@@ -67,5 +67,20 @@ hr {
 
 .copyright {
     color: var(--sub-font-color);
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .footer-bg-font {
+        font-size: 20rem;
+    }
+
+    .footer-link-co {
+        font-size: 3.5rem;
+    }
 }
