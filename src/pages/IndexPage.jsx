@@ -122,7 +122,7 @@ function IndexPage() {
                     name="VibeVote"
                     date="July 2024 - Today"
                     description="VibeVote simplifies song request management at events, an essential tool for hosts and DJs."
-                    link="https://vibevote.de"
+                    link="https://vibeVote.de"
                     collaborators="Songrequesting made easy"
                     className="mT"
                 />
