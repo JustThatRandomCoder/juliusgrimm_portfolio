@@ -80,6 +80,11 @@ header {
   font-size: 1.2vw;
   text-decoration: none;
   line-height: 3;
+  color: var(--font-color);
+}
+
+.email_head:hover {
+  color: var(--sub-font-color);
 }
 
 .head {
@@ -101,6 +106,7 @@ header {
   white-space: nowrap;
   overflow: hidden;
   letter-spacing: -10px;
+  opacity: 0.7;
 }
 
 .headline {
@@ -302,7 +308,74 @@ header {
 }
 
 @media only screen and (max-width: 700px) {
-  .project.mW {
-    margin-top: 8vw;
+
+  .project.mW,
+  .project.mT {
+    margin-top: 5rem;
+  }
+
+  .project-thumbnail {
+    height: 13rem;
+  }
+
+  .projectLogo {
+    width: 4rem;
+  }
+
+  .projectLogo.openWeather {
+    width: 5.5rem;
+  }
+
+  .project-name {
+    font-size: 1.5rem;
+  }
+
+  .project-date {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .bg-font {
+    font-size: 80vw;
+    line-height: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    display: none;
+  }
+
+  .headername {
+    font-size: 1.3rem;
+    letter-spacing: 8px;
+  }
+
+  .email_head {
+    font-size: 0.8rem;
+  }
+
+  .headline {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  .links_text {
+    display: none;
+  }
+
+  .socials {
+    font-size: 2rem;
+    width: 70% !important;
+  }
+
+  .firstSection {
+    height: 80vh;
   }
 }

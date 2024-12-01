@@ -1,6 +1,16 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-function Project({ thumbnail, alt, logoClass, name, date, description, link, codeLink, collaborators, className }) {
+function Project({ thumbnail, alt, logoClass, name, date, mobileDate, description, link, codeLink, collaborators, className }) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 700);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div className={`project ${className || ''}`}>
             <motion.div
@@ -12,9 +22,9 @@ function Project({ thumbnail, alt, logoClass, name, date, description, link, cod
             </motion.div>
             <div className="project-name">
                 <a className="project-name-link project-name-headline">{name}</a>
-                {collaborators && <span> - {collaborators}</span>}
+                {!isMobile && collaborators && <span> - {collaborators}</span>}
             </div>
-            <div className="project-date">{date}</div>
+            <div className="project-date">{isMobile ? mobileDate || date : date}</div>
             <div className="project-description">{description}</div>
             {codeLink && (
                 <div onClick={() => window.open(codeLink, '_blank')} className="project-description code">

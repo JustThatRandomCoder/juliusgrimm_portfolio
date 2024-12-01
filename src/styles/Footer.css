@@ -24,6 +24,7 @@ hr {
     letter-spacing: -5px;
     line-height: normal;
     height: 80%;
+    opacity: 0.5;
 }
 
 .footer-main {
@@ -82,5 +83,45 @@ hr {
 
     .footer-link-co {
         font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        margin-top: 7rem;
+    }
+
+    .footer-link {
+        font-size: 1.7rem;
+    }
+
+    .footer-bg-font {
+        font-size: 9rem;
+        opacity: 0.4;
+    }
+
+    .footer-bg-font.main {
+        letter-spacing: 2px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
+
+    .footer-link-co {
+        display: flex;
+        flex-direction: row !important;
+        width: 80%;
+        justify-content: space-around;
+        color: var(--sub-font-color);
+        text-shadow: 10px 10px 100px #000000b5;
+    }
+
+    .footer-link-co.mobile {
+        width: 90%;
+    }
+
+    .footer-linktree.mobile {
+        margin-top: -2.5rem;
     }
 }

@@ -28,8 +28,8 @@ function IndexPage() {
                     duration: 3,
                     scrollTrigger: {
                         trigger: project,
-                        start: "top 90%",
-                        end: "top 20%",
+                        start: "top 100%",
+                        end: "top 30%",
                         scrub: true,
                         invalidateOnRefresh: true,
                     },
@@ -53,7 +53,7 @@ function IndexPage() {
             >
                 <header>
                     <div className="headername">JULIUS GRIMM</div>
-                    <a className="email_head">me@juliusgrimm.dev</a>
+                    <a className="email_head" href="mailto:me@juliusgrimm.dev">me@juliusgrimm.dev</a>
                 </header>
                 <div className="head">
                     <div className="bg-font bebas-neue-regular">hello</div>
@@ -110,6 +110,7 @@ function IndexPage() {
                     logoClass=""
                     name="Festifly"
                     date="October 2024 - Today | BETA EXPECTED IN 2025"
+                    mobileDate="October 2024 -Today | IN DEV..."
                     description="FestiFly is an event management tool with features like stage planning, AI-powered song requests, and group chats."
                     collaborators="Eventmanagement redefined"
                     className="nohover"
@@ -131,8 +132,9 @@ function IndexPage() {
                     logoClass="openWeather"
                     name="OpenWeatherHub"
                     date="May 2024 - Today | BETA EXPECTED IN 2025"
+                    mobileDate="May 2024 -Today | IN DEV..."
                     description="OpenWeatherHub is an open-source weather service that allows users to add their own cost-effective weather station and integrate it into their smart home."
-                    className="nohover"
+                    className="nohover mW"
                 />
                 <Project
                     thumbnail="../public/skyview_logo.svg"
