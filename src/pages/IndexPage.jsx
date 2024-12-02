@@ -148,7 +148,7 @@ function IndexPage() {
                     className="mT"
                 />
             </div>
-            <Footer />
+            <Footer aboutPage={false} />
         </>
     );
 }
