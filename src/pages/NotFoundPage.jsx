@@ -11,7 +11,6 @@ function NotFoundPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5 }}
-                className="firstSection"
             >
                 <div className="bg-font bebas-neue-regular">404</div>
             </motion.div>
