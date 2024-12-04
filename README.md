@@ -31,4 +31,5 @@ Feel free to explore, learn, or contribute!
 - **Build Tool:** [Vite](https://vitejs.dev/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** CSS modules / Tailwind CSS (customize based on your choice).
-- **Deployment:** [24fire](https://24fire.de).
+- **Styling:** [Figma](https://figma.com/)
+- **Deployment:** [24fire](https://24fire.de)
