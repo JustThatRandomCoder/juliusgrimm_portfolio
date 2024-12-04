@@ -21,7 +21,7 @@ Feel free to explore, learn, or contribute!
 - **High Performance:** Built with Vite for lightning-fast development and build times.
 - **Modern Tech Stack:** Uses React with TypeScript for scalable and maintainable code.
 - **Interactive UI:** Showcases animations and transitions for an engaging user experience.
-- **Accessible:** Follows web accessibility standards (WCAG).
+- **Extendet About-Me-Page:** In this new Portfolio I've decided to give you a little backgound on myself.
 - **Customizable:** Simple and modular structure to allow modifications and upgrades.
 
 ---
