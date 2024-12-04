@@ -16,7 +16,7 @@ function Project({ thumbnail, alt, logoClass, name, date, mobileDate, descriptio
             <motion.div
                 onClick={() => link && window.open(link, '_blank')}
                 className={`project-thumbnail ${!link ? 'nohover' : ''}`}
-                whileTap={{ scale: 0.98 }}
+                whileTap={{ scale: 0.90 }}
             >
                 <img src={thumbnail} alt={alt} className={`projectLogo ${logoClass}`} />
             </motion.div>
