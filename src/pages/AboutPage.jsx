@@ -163,7 +163,7 @@ function AboutPage() {
           <div className="figure figure5">
             <img
               className="image"
-              src="../public/figures/figure5.HEIC"
+              src="../public/figures/figure5.heic"
               alt="Figure 5 - Amsterdam 2024"
             />
           </div>
