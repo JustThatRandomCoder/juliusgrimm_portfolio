@@ -1,4 +1,3 @@
-import { useState } from "react";
 import IndexPage from "./pages/IndexPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
