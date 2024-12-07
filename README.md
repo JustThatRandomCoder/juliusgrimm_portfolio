@@ -2,7 +2,7 @@
 
 Welcome to the repository of my **personal portfolio**! This project showcases my work, skills, and the technologies I use in my daily development workflow. It's not just a portfolio but also a learning resource for others to see my development process and build upon it.
 
-> **Live Demo:** [https://beta.juliusgrimm.dev](https://beta.juliusgrimm.dev)
+> **Live Demo:** [https://juliusgrimm.dev](https://beta.juliusgrimm.dev)
 
 ---
 
