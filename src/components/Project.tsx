@@ -38,22 +38,25 @@ const Project: FC<ProjectProps> = ({
   }, []);
 
   return (
-    <div className={`project ${className || ''}`}>
+    <div className={`project ${className || ""}`}>
       <motion.div
-        onClick={() => link && window.open(link, '_blank')}
-        className={`project-thumbnail ${!link ? 'nohover' : ''}`}
-        whileTap={{ scale: 0.90 }}
+        onClick={() => link && window.open(link, "_blank")}
+        className={`project-thumbnail ${!link ? "nohover" : ""}`}
+        whileTap={{ scale: 0.9 }}
       >
         <img src={thumbnail} alt={alt} className={`projectLogo ${logoClass}`} />
       </motion.div>
       <div className="project-name">
-        <a className="project-name-link project-name-headline">{name}</a>
+        <span className="project-name-link project-name-headline">{name}</span>
         {!isMobile && collaborators && <span> - {collaborators}</span>}
       </div>
       <div className="project-date">{isMobile ? mobileDate || date : date}</div>
       <div className="project-description">{description}</div>
       {codeLink && (
-        <div onClick={() => window.open(codeLink, '_blank')} className="project-description code">
+        <div
+          onClick={() => window.open(codeLink, "_blank")}
+          className="project-description code"
+        >
           View Code
         </div>
       )}
