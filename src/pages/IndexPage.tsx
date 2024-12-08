@@ -15,6 +15,13 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const IndexPage: FC = () => {
+  const currentAge =
+    new Date().getFullYear() -
+    2010 -
+    (new Date().getMonth() + 1 < 3 ||
+    (new Date().getMonth() + 1 === 3 && new Date().getDate() < 2)
+      ? 1
+      : 0);
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -67,7 +74,8 @@ const IndexPage: FC = () => {
         <div className="head">
           <div className="bg-font bebas-neue-regular">hello</div>
           <div className="headline">
-            I'm a fullstack 14 year old <br /> developer and designer <br />
+            I'm a {currentAge} year old fullstack <br /> developer and designer{" "}
+            <br />
             based in Germany
           </div>
         </div>
