@@ -1,27 +1,24 @@
 # 🚀 My Portfolio - Open Source 🎉
 
-Welcome to the repository of my **personal portfolio**! This project showcases my work, skills, and the technologies I use in my daily development workflow. It's not just a portfolio but also a learning resource for others to see my development process and build upon it.
+Hey there! Welcome to the repo for my **personal portfolio**—a space where I share my work, passions, and the tools I use every day as a developer. It's not just a website; it's a little slice of who I am.
 
-> **Live Demo:** [https://juliusgrimm.dev](https://beta.juliusgrimm.dev)
+> **Live Demo:** [https://juliusgrimm.dev](https://juliusgrimm.dev)
 
 ---
 
 ## 📖 About
 
-This portfolio was built using **Vite**, **React**, and **TypeScript** to create a fast, modern, and highly customizable project.  
-I've decided to make this project **open-source** so that others can get a better understanding of how I approach **frontend development** (and eventually backend tasks as I expand the project).
-
-Feel free to explore, learn, or contribute!
+This portfolio is built with **React**, **TypeScript**, and **Vite** to be fast, smooth, and flexible.
+It’s more than just code—there’s a bit of *me* in every detail. If you're curious, check out the "About Me" page to learn about my journey.
 
 ---
 
 ## ✨ Features
 
-- **Responsive Design:** Fully optimized for all devices and screen sizes.
-- **High Performance:** Built with Vite for lightning-fast development and build times.
-- **Modern Tech Stack:** Uses React with TypeScript for scalable and maintainable code.
-- **Interactive UI:** Showcases animations and transitions for an engaging user experience.
-- **Extendet About-Me-Page:** In this new Portfolio I've decided to give you a little backgound on myself.
+- **Modern & Responsive:** Designed to look great on any device.
+- **Interactive Touches:** Subtle animations and transitions for extra flair.
+- **About Me Section:** A personal look at my story, skills, and passions.
+- **Multilingual:** Built with global users in mind.
 
 ---
 
@@ -30,6 +27,7 @@ Feel free to explore, learn, or contribute!
 - **Frontend Framework:** [React](https://reactjs.org/)
 - **Build Tool:** [Vite](https://vitejs.dev/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** CSS modules / Tailwind CSS (customize based on your choice).
-- **Styling:** [Figma](https://figma.com/)
+- **Styling:** CSS modules / Tailwind CSS.
+- **Design:** [Figma](https://figma.com/)
 - **Deployment:** [24fire](https://24fire.de)
+- **Webserver:** [OpenLiteSpeed](https://openlitespeed.org)
