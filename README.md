@@ -9,7 +9,7 @@ Hey there! Welcome to the repo for my **personal portfolio**—a space where I s
 ## 📖 About
 
 This portfolio is built with **React**, **TypeScript**, and **Vite** to be fast, smooth, and flexible.
-It’s more than just code—there’s a bit of *me* in every detail. If you're curious, check out the "About Me" page to learn about my journey.
+It’s more than just code—there’s a bit of _me_ in every detail. If you're curious, check out the "About Me" page to learn about my journey.
 
 ---
 
@@ -27,7 +27,7 @@ It’s more than just code—there’s a bit of *me* in every detail. If you're 
 - **Frontend Framework:** [React](https://reactjs.org/)
 - **Build Tool:** [Vite](https://vitejs.dev/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** CSS modules / Tailwind CSS.
+- **Styling:** CSS modules
 - **Design:** [Figma](https://figma.com/)
 - **Deployment:** [24fire](https://24fire.de)
 - **Webserver:** [OpenLiteSpeed](https://openlitespeed.org)
