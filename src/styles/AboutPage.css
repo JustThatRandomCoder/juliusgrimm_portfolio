@@ -182,3 +182,28 @@ figure.figure5 {
         width: 100%;
     }
 }
+
+.about-page-content {
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.loading .aboutSection,
+.loading .figure-co,
+.loading .paragraph-co {
+    opacity: 0;
+    display: none;
+}
+
+.loading .about-page-content {
+    opacity: 0;
+}
+
+.about-page-content {
+    opacity: 1;
+    display: block;
+}
+
+.about-page-content .loading {
+    z-index: 999;
+}

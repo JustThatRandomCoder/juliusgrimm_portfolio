@@ -1,0 +1,31 @@
+:root {
+    --backgound-color: #0a0b15;
+    --font-color: #a5a5cc;
+    --sub-font-color: #5d5d7c;
+    --bg-font-color: #a0a0c323;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--backgound-color);
+}
+
+.spinner {
+    width: 4rem;
+    height: 4rem;
+    border-width: 0.25rem;
+    border-style: solid;
+    border-color: currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

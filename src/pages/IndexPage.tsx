@@ -137,7 +137,7 @@ const IndexPage: FC = () => {
       </motion.div>
       <div className="projectSection" id="projectSection" ref={scrollRef}>
         <Project
-          thumbnail="https://cdn.festifly.de/assets/img/festifly.de/logo/logo.svg"
+          thumbnail="/festifly_logo.svg"
           alt="Festifly Logo"
           logoClass=""
           name="Festifly"
