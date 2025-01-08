@@ -111,12 +111,12 @@ const AboutPage: FC = () => {
             <img
               className="image"
               src="/figures/figure1.webp"
-              alt="Figure 1 - France 2024"
+              alt="Figure 1 - London 2024"
             />
             <img
               className="image image-mobile"
               src="/figures/figure3.webp"
-              alt="Figure 1 - France 2024"
+              alt="Figure 3 - Paris 2024"
             />
             <div className="figure-quote figure-quote2">
               My passion for technology and coding began the day I got my first
@@ -130,7 +130,7 @@ const AboutPage: FC = () => {
             <img
               className="image"
               src="/figures/figure2.webp"
-              alt="Figure 2 - France 2024"
+              alt="Figure 2 - London 2024"
             />
           </div>
           <div className="figure figure3">
